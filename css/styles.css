@@ -74,28 +74,6 @@ main p {
     font-size: 1.1em;
 }
 
-main ul {
-    padding: 0;
-    list-style: none;
-}
-
-main li {
-    background: #f4f4f4;
-    margin-bottom: 10px;
-    padding: 10px;
-    border: #ccc 1px solid;
-    border-radius: 5px;
-}
-
-main li a {
-    text-decoration: none;
-    color: #333;
-}
-
-main li a:hover {
-    color: #77c8c8;
-}
-
 footer {
     background: #333;
     color: #fff;
@@ -104,7 +82,36 @@ footer {
     margin-top: 20px;
 }
 
-header nav ul li a.active {
-    color: #77c8c8;
+.project {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 20px;
+    background-color: #fff;
+}
+
+.project img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 10px 0;
+    transition: transform 0.3s ease-in-out;
+}
+
+.project img:hover {
+    transform: scale(1.1);
+}
+
+.project h3 {
+    margin: 0 0 10px;
+}
+
+.project a {
+    color: #0073e6;
+    text-decoration: none;
     font-weight: bold;
+}
+
+.project a:hover {
+    text-decoration: underline;
 }
