@@ -1,4 +1,4 @@
-/* Existing CSS */
+/* body */
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
@@ -7,24 +7,45 @@ body {
     background-color: #f4f4f4;
 }
 
+html, body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+.container-index {
+    width: 50%;
+    margin: auto;
+    overflow: hidden;
+    text-align: center;
+   background-color: rgba(156, 122, 105, 0.13);
+    border-radius: 5px;
+    padding: 10px;
+
+}
+
+/* nav bar */
 .container {
     width: 80%;
     margin: auto;
     overflow: hidden;
 }
 
+/* header */
 header {
     background: #333;
     color: #fff;
-    padding-top: 30px;
-    min-height: 70px;
+    padding: 15px 0;
     border-bottom: #77c8c8 3px solid;
     text-align: center;
 }
 
 header h1 {
     margin: 0;
-    font-size: 2.5em;
+    font-size: 2em;
 }
 
 header p {
@@ -36,33 +57,37 @@ header a {
     color: #fff;
     text-decoration: none;
     text-transform: uppercase;
-    font-size: 16px;
+    font-size: 14px;
+    padding: 10px 15px;
+    display: inline-block;
+    transition: background-color 0.3s ease-in-out;
+}
+
+header a:hover {
+    background-color: #575757;
+    border-radius: 5px;
 }
 
 header ul {
     padding: 0;
     list-style: none;
+    margin: 0;
 }
 
 header li {
-    display: inline;
-    padding: 0 20px 0 20px;
-}
-
-header .container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    display: inline-block;
+    margin-right: 5px;
 }
 
 header nav {
     margin-top: 10px;
 }
 
+/* main */
 main {
     padding: 20px 0;
     background: #fff;
+    flex: 1;
 }
 
 main h2 {
@@ -70,11 +95,26 @@ main h2 {
     color: #333;
 }
 
-main p {
-    margin: 10px 0 0;
-    font-size: 1.1em;
+.h2-custom {
+    margin: 10px 90px 10px;
+    color: #333;
+    font-weight: bold;
 }
 
+main p {
+    margin: 10px 0 10px;
+    font-size: 1.1em;
+    color: #45413d;
+}
+
+/* wrapper used in footer */
+.wrapper {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+/* footer */
 footer {
     background: #333;
     color: #fff;
@@ -83,24 +123,15 @@ footer {
     margin-top: 20px;
 }
 
+/* projects */
 .project {
-    border: 1px solid #ddd;
+    border: none;
     border-radius: 5px;
     padding: 10px;
     margin-bottom: 20px;
     background-color: #fff;
-}
-
-.project img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-    margin: 10px 0;
-    transition: transform 0.3s ease-in-out;
-}
-
-.project img:hover {
-    transform: scale(1.1);
+    flex: 0 0 40%; /* Ensure the project div takes up 40% of the width */
+    max-width: 40%; /* Ensure the project div takes up 40% of the width */
 }
 
 .project h3 {
@@ -117,22 +148,80 @@ footer {
     text-decoration: underline;
 }
 
-/* New CSS for Sticky Footer */
-html, body {
-    height: 100%;
+/* gifs */
+.project img {
+    max-width: 100%;
+    max-height: 400px; /* Set a maximum height to ensure consistency */
+    width: auto;
+    height: auto;
+    display: block;
+    margin: 10px 0;
+    transition: transform 0.3s ease-in-out;
+    border: 1px solid #ccc;
+    border-radius: 5px;
 }
 
-body {
+.project img:hover {
+    transform: scale(1.1);
+}
+
+.project-section {
     display: flex;
-    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
 }
 
-.wrapper {
+.project-description {
     flex: 1;
-    display: flex;
-    flex-direction: column;
+    margin-right: 20px;
+    margin-left: 20px;
+    max-width: 55%; /* Ensure the description div takes up 55% of the width */
 }
 
-main {
-    flex: 1;
+/*buttons*/
+/*button for gis page*/
+.btn-primary {
+    background-color: #45413d;
+    color: white;
+    border: none;
+    transition: background-color 0.3s ease-in-out;
+    width: auto; /* Set width to auto */
+    padding: 10px 20px; /* Add padding for better appearance */
+    display: block; /* Make the button a block element */
+    text-align: center; /* Center the text inside the button */
+    margin: 0 auto 10px auto; /* Center the button horizontally and add margin at the bottom */
+}
+
+.btn-primary:hover {
+    background-color: #9c7a69;
+}
+
+/*button for nav bar*/
+.nav-item:hover {
+    background-color: #9c7a69;
+    color: white;
+    border: none;
+    transition: background-color 0.3s ease-in-out;
+}
+
+a.nav-link:hover {
+    background-color: #9c7a69;
+    color: white;
+}
+
+/*button for scripting language page*/
+a.btn-primary {
+    background-color: #45413d;
+    color: white;
+    border: none;
+    transition: background-color 0.3s ease-in-out;
+    width: 400px; /* Set width to 100% */
+    padding: 10px 20px; /* Add padding for better appearance */
+
+    text-align: center; /* Center the text inside the button */
+    margin: 0 auto 10px auto; /* Center the button horizontally and add margin at the bottom */
+}
+
+a.btn-primary:hover {
+    background-color: #9c7a69;
 }
