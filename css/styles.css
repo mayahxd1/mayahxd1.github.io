@@ -1,45 +1,105 @@
-/* Add your CSS styles here */
 body {
     font-family: Arial, sans-serif;
+    line-height: 1.6;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    background-color: #f4f4f4;
 }
 
-header, nav, main, footer {
-    padding: 20px;
-    max-width: 1200px;
+.container {
+    width: 80%;
     margin: auto;
+    overflow: hidden;
 }
 
 header {
-    background-color: #f8f9fa;
+    background: #333;
+    color: #fff;
+    padding-top: 30px;
+    min-height: 70px;
+    border-bottom: #77c8c8 3px solid;
     text-align: center;
 }
 
-nav ul {
-    list-style-type: none;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    gap: 10px;
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
 }
 
-nav ul li {
-    display: inline;
+header p {
+    margin: 0;
+    font-size: 1.2em;
 }
 
-nav ul li a {
+header a {
+    color: #fff;
     text-decoration: none;
-    color: #007bff;
+    text-transform: uppercase;
+    font-size: 16px;
 }
 
-main section {
-    margin-top: 20px;
+header ul {
+    padding: 0;
+    list-style: none;
+}
+
+header li {
+    display: inline;
+    padding: 0 20px 0 20px;
+}
+
+header .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+header nav {
+    margin-top: 10px;
+}
+
+main {
+    padding: 20px 0;
+    background: #fff;
+}
+
+main h2 {
+    margin: 0 0 10px;
+    color: #333;
+}
+
+main p {
+    margin: 10px 0 0;
+    font-size: 1.1em;
+}
+
+main ul {
+    padding: 0;
+    list-style: none;
+}
+
+main li {
+    background: #f4f4f4;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: #ccc 1px solid;
+    border-radius: 5px;
+}
+
+main li a {
+    text-decoration: none;
+    color: #333;
+}
+
+main li a:hover {
+    color: #77c8c8;
 }
 
 footer {
+    background: #333;
+    color: #fff;
     text-align: center;
-    background-color: #f8f9fa;
-    padding: 10px 0;
+    padding: 20px 0;
+    margin-top: 20px;
 }
